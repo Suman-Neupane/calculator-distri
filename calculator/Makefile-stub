@@ -1,0 +1,13 @@
+# Compiler and flags
+CC := gcc
+CFLAGS := -Wall -Wextra -Iinclude
+
+# Directories
+SRCDIR := src
+OBJDIR := obj
+
+# Sources
+SOURCES := $(wildcard $(SRCDIR)/*.c)
+OBJECTS := $(patsubst $(SRCDIR)/%.c,$(OBJDIR)/%.o,$(SOURCES))
+
+
